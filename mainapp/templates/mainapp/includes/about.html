@@ -1,0 +1,29 @@
+{% load static %}
+<div class="row align-items-center">
+    <section class="col-md-7 fs-4">
+        {% if chunk.text %}
+            {{ chunk.text|safe }}
+        {% else %}
+        <p class="text-lg-justify">Компания предлагает широкий спектр IT-услуг. Мы
+            специализируемся на проектировании,
+            разработке и интеграции информационных систем в области промышленной безопасности, обеспечении технической
+            поддержки и администрировании.</p>
+        <p class="text-lg-justify">Наша команда профессионалов всегда готова помочь вам выбрать оптимальное решение для
+            ваших задач и обеспечить
+            его успешную реализацию. Доверьте свою IT-инфраструктуру профессионалам, и мы поможем вам достичь новых
+            высот в бизнесе!</p>
+        {% endif %}
+    </section>
+    <div class="col-md">
+        {% if chunk.picture %}
+        <img src="{{ chunk.picture.url }}" class="img-fluid" alt="about_nedk">
+        {% else %}
+        <img src="{% static 'img/computers.svg' %}" class="img-fluid" alt="about_nedk">
+        {% endif %}
+    </div>
+</div>
+
+<div class="text-center">
+    <button class="btn btn-primary btn-lg mt-4 mt-lg-5" type="button" data-bs-toggle="modal"
+        data-bs-target="#messageModal"><i class="bi bi-envelope me-2"></i>Написать нам</button>
+</div>

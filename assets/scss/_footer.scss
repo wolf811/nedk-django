@@ -1,0 +1,21 @@
+footer {
+    background-color: #333333;
+
+    .nav-link {
+        color: #A9B0C3 !important;
+
+        &:hover {
+            color: #fff;
+        }
+
+        @media (max-width: 767px) {
+            font-size: 0.9rem;
+        }
+    }
+
+    p {
+        text-transform: uppercase;
+        color: #f8f9fa !important;
+    }
+
+}

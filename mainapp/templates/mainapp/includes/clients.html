@@ -1,0 +1,61 @@
+{% load static %}
+<div class="row row-cols-2 row-cols-md-4 row-cols-lg-5 g-4 justify-content-center">
+    {% for client in clients %}
+        <div class="col">
+            <div class="card shadow bg-light p-4 rounded-4 h-100 text-center">
+                <a href="{{ client.site }}" target="_blank" class="my-auto">
+                    <img src="{{ client.logotype.url }}" class="img-fluid" alt="{{ client.title }}">
+                </a>
+            </div>
+        </div>
+    {% endfor %}
+    {% comment %} <div class="col">
+        <div class="card shadow bg-light p-4 rounded-4 h-100 text-center">
+            <a href="https://naks.ru/" target="_blank" class="my-auto">
+                <img src="{% static 'img/logo_naks.png' %}" class="img-fluid" alt="Логотип СРО Ассоциация НАКС">
+            </a>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card shadow bg-light p-4 rounded-4 h-100 text-center">
+            <a href="https://www.transneft.ru/" target="_blank" class="my-auto">
+                <img src="{% static 'img/logo_transneft.png' %}" class="img-fluid" alt="Логотип ПАО Транснефть">
+            </a>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card shadow bg-light p-4 rounded-4 h-100 text-center">
+            <a href="https://naks.ru/naks-media/" target="_blank" class="my-auto">
+                <img src="{% static 'img/logo-naks-media.png' %}" class="img-fluid" alt="Логотип НАКС Медиа">
+            </a>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card shadow bg-light p-4 rounded-4 h-100 text-center">
+            <a href="https://mvcnaks.ru/" target="_blank" class="my-auto">
+                <img src="{% static 'img/mvcnaks-logo.png' %}" class="img-fluid" alt="Логотип МВЦ НАКС">
+            </a>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card shadow bg-light p-4 rounded-4 h-100 text-center">
+            <a href="https://gacmrnaks.ru/" target="_blank" class="my-auto">
+                <img src="{% static 'img/logo_gac_mr.png' %}" class="img-fluid w-75 w-lg-50" alt="Логотип ГАЦ МР НАКС">
+            </a>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card shadow bg-light p-4 rounded-4 h-100 text-center">
+            <a href="https://diright.ru/" target="_blank" class="my-auto">
+                <img src="{% static 'img/logo_diright.png' %}" class="img-fluid" alt="Логотип Дирайт">
+            </a>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card shadow bg-light p-4 rounded-4 h-100 text-center">
+            <a href="https://ronktd.ru/" target="_blank" class="my-auto">
+                <img src="{% static 'img/logo_ronktd.png' %}" class="img-fluid w-75 w-lg-50" alt="Логотип РОНКТД">
+            </a>
+        </div>
+    </div> {% endcomment %}
+</div>

@@ -1,0 +1,27 @@
+{% load static %}
+<nav class="navbar navbar-main sticky-top navbar-expand-lg bg-body-tertiary mb-4">
+    <div class="container shadow rounded-4 rounded-top-0">
+        <a class="navbar-brand mr-0" href="{% url 'index' %}"><img src="{% static 'img/logo_nedk.png' %}" alt="Логотип" class="w-75"></a>
+        <div class="navbar-text fs-5 d-none d-md-block">
+            <a href="tel:+74997847289" class="me-3"><i class="bi bi-telephone me-1"></i>+7 499 784-72-89</a>
+            <a href="mailto:nedk-it@yandex.ru"><i class="bi bi-envelope me-1"></i>nedk-it@yandex.ru</a>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item fs-4">
+                    <a class="nav-link {% if '/' == request.path %}active{% endif %}" href="{% url 'index' %}">Главная</a>
+                </li>
+                <li class="nav-item fs-4">
+                    <a class="nav-link {% if 'services' in request.path %}active{% endif %}" href="{% url 'services' %}">Услуги</a>
+                </li>
+                <li class="nav-item fs-4">
+                    <a class="nav-link {% if 'contacts' in request.path %}active{% endif %}" href="{% url 'contacts' %}">Контакты</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

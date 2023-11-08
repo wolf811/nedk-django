@@ -1,0 +1,21 @@
+header {
+  border-bottom: 1px solid #dee2e6;
+  background-image: url(../img/bg-header.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header-main {
+  h1 {
+    // font-size: 1.5rem;
+
+    @media (max-width: 991px) {
+      font-size: 1.25rem;
+    }
+
+    @media (max-width: 374px) {
+      font-size: 1.1rem;
+    }
+  }
+}

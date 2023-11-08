@@ -1,0 +1,42 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+{% block content %}
+<div class="container mb-3 bg-body-tertiary">
+    <h1 class="page-title fs-1">{{ title }}</h1>
+    <hr>
+    {% include "mainapp/includes/breadcrumb.html" %}
+    <div class="rounded-4 bg-light p-3 p-lg-5 shadow-sm">
+        <div class="row">
+            <div class="col-lg-6">
+                <section class="fs-5">
+                    <p><a href="https://yandex.ru/maps/213/moscow/?from=mapframe&ll=37.752366%2C55.664229&mode=usermaps&source=mapframe&um=constructor%3A9cfbe5a635de47f9a8352f5662bfceb5f678008fcdd23fa010d5c0ccf3565811&utm_source=mapframe&z=15"
+                            class="me-2 me-md-0" target="_blank"><i class="bi bi-geo-alt-fill me-1"></i>г.
+                            Москва, ул.
+                            Братиславская,
+                            д. 6, эт. 4, пом. 272</a></p>
+                    <p><a href="tel:+74997847289" class="me-2 me-md-0"><i
+                                class="bi bi-telephone-fill me-1"></i>+7(499)784-72-89</a></p>
+                    <p class="mb-4">
+                        <a href="mailto:soft@naks.ru" class="me-3"><i
+                                class="bi bi-envelope-fill me-1"></i>nedk-it@yandex.ru</a>
+                    </p>
+                    <h3>Схема проезда</h3>
+                    <p>Станция метро «Братиславская», выход из последнего вагона. Ул.
+                        Братиславская,
+                        д.6, 4 подъезд, 4
+                        этаж
+                        (комплекс «Первый
+                        Деловой Дом», пешком 600 м. от станции метро)</p>
+                </section>
+            </div>
+            <div class="col-sm">
+                <div class="filter-grayscale shadow-sm">
+                    <script type="text/javascript" charset="utf-8" async
+                        src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A9cfbe5a635de47f9a8352f5662bfceb5f678008fcdd23fa010d5c0ccf3565811&amp;width=100%25&amp;height=500&amp;lang=ru_RU&amp;scroll=false">
+                        </script>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

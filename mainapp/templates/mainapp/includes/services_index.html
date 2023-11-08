@@ -1,0 +1,70 @@
+{% load static %}
+<div class="row g-4 align-content-md-stretch justify-content-center mb-5">
+    {% for service in services %}
+        {% comment %} <div class="col-md-6 {% if not forloop.counter|divisibleby:2 %}col-lg{% endif %}"> {% endcomment %}
+        <div class="col-md-6 col-xl-4">
+        <div class="card card-main text-bg-primary nav-item rounded-4">
+            {% if service.picture %}
+                <img src="{{ service.picture.url }}" class="card-img nav-link rounded-4" alt="{{ service.title }}">
+            {% else %}
+                <img src="{% static 'img/dev3.jpeg' %}" class="card-img nav-link rounded-4" alt="{{ service.title }}">
+            {% endif %}
+            <div class="card-img-overlay d-flex flex-column justify-content-between">
+                <h3 class="fs-4 card-title">{{ service.title }}</h3>
+                <a href="{% url 'services' %}" class="btn btn-lg btn-light ms-3 mt-auto">Подробнее<i
+                        class="bi bi-arrow-right ms-1"></i></a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    {% comment %} <div class="col-md-6">
+        <div class="card card-main text-bg-primary nav-item rounded-4">
+            <img src="{% static 'img/dev3.jpeg' %}" class="card-img nav-link rounded-4" alt="Разработка информационных систем">
+            <div class="card-img-overlay d-flex flex-column justify-content-between">
+                <h3 class="card-title">Разработка информационных систем</h3>
+                <a href="services.html" class="btn btn-lg btn-light ms-3 mt-auto">Подробнее<i
+                        class="bi bi-arrow-right ms-1"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card card-main text-bg-dark nav-item rounded-4">
+            <img src="{% static 'img/dev1.png' %}" class="card-img nav-link rounded-4" alt="Разработка API">
+            <div class="card-img-overlay d-flex flex-column justify-content-between">
+                <h3 class="card-title">Предоставление доcтупа</h3>
+                <a href="services.html" class="btn btn-lg btn-light ms-3 mt-auto">Подробнее<i
+                        class="bi bi-arrow-right ms-1"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-lg">
+        <div class="card card-main text-bg-dark nav-item rounded-4">
+            <img src="{% static 'img/api.jpg' %}" class="card-img nav-link rounded-4" alt="Разработка API">
+            <div class="card-img-overlay d-flex flex-column justify-content-between">
+                <h3 class="card-title">Разработка API</h3>
+                <a href="services.html" class="btn btn-lg btn-light ms-3 mt-auto">Подробнее<i
+                        class="bi bi-arrow-right ms-1"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-lg">
+        <div class="card card-main text-bg-dark nav-item rounded-4">
+            <img src="{% static 'img/dev5.jpg' %}" class="card-img nav-link rounded-4" alt="Обработка данных">
+            <div class="card-img-overlay d-flex flex-column justify-content-between">
+                <h3 class="card-title">Создание сайтов</h3>
+                <a href="services.html" class="btn btn-lg btn-light ms-3 mt-auto">Подробнее<i
+                        class="bi bi-arrow-right ms-1"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 col-lg">
+        <div class="card card-main text-bg-dark nav-item rounded-4">
+            <img src="{% static 'img/dev.jpg' %}" class="card-img nav-link rounded-4" alt="Поддержка продуктов">
+            <div class="card-img-overlay d-flex flex-column justify-content-between">
+                <h3 class="card-title">Поддержка продуктов</h3>
+                <a href="services.html" class="btn btn-lg btn-light ms-3 mt-auto">Подробнее<i
+                        class="bi bi-arrow-right ms-1"></i></a>
+            </div>
+        </div>
+    </div> {% endcomment %}
+</div>

@@ -1,11 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Hello!</h1>
-</body>
-</html>
+{% extends 'mainapp/base.html' %}
+{% load static %}
+{% block content %}
+<div class="container mb-5 bg-body-tertiary rounded-4 bg-light p-3 p-lg-5 shadow-sm">
+    {% include "mainapp/includes/about.html" %}
+</div>
+<div class="container mb-4 bg-body-tertiary">
+    <h2 id="services" class="page-title fs-1 mb-3 mb-lg-4">Услуги</h2>
+    <hr class="title-line mb-4 mb-lg-5">
+    {% include "mainapp/includes/services_index.html" %}
+</div>
+<div class="container mb-4 bg-body-tertiary">
+    <h2 id="services" class="page-title fs-1 mb-3 mb-lg-4">Наши клиенты</h2>
+    <hr class="title-line mb-4 mb-lg-5">
+    {% include "mainapp/includes/clients.html" %}
+</div>
+{% endblock %}

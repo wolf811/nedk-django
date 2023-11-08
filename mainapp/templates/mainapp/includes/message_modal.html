@@ -1,0 +1,63 @@
+{% load static %}
+<div class="modal fade" id="messageModal" tabindex="-1" aria-labelledby="messageModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <form action="" method="post">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="messageModalLabel">Ваш запрос</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="fs-6 text-center"><i class="bi bi-check text-success me-2"></i>Спасибо, Ваш запрос
+                        отправлен!<br>В ближайшее время мы свяжемся с Вами.</p>
+                    <div class="w-lg-75 mx-auto">
+                        <div class="mb-3">
+                            <label for="fio" class="form-label">Ваше Имя</label>
+                            <input type="text" class="form-control" id="fio">
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone_contact" class="form-label">Контактный телефон</label>
+                            <input type="phone" class="form-control" id="phone_contact">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email_contact" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email_contact" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="tema" class="form-label">Тема запроса</label>
+                            <select class="form-select" id="tema">
+                                <option class="text-small" selected>-</option>
+                                <option class="text-small" value="1">Разработка информационных систем</option>
+                                <option class="text-small" value="2">Предоставление доступа</option>
+                                <option class="text-small" value="3">Разработка API</option>
+                                <option class="text-small" value="4">Создание сайтов</option>
+                                <option class="text-small" value="5">Поддержка продуктов</option>
+                                <option class="text-small" value="6">Другое</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="question" class="form-label">Текст запроса</label>
+                            <textarea class="form-control" id="question" rows="4"></textarea>
+                        </div>
+                        <div class="mb-4">
+                            <label for="file" class="form-label">Загрузить файл</label>
+                            <input type="file" class="form-control" id="file">
+                        </div>
+                    </div>
+                    <div class="p-3 bg-light rounded-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="soglasie" required>
+                            <label class="form-check-label text-small" for="soglasie">
+                                даю своё Согласие на обработку персональных данных
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">Отправить<i
+                            class="bi bi-arrow-right ms-1"></i></button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
