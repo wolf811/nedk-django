@@ -30,6 +30,8 @@ def services(request):
 
 def contacts(request):
     title = 'Контакты'
+    contacts = Contacts.objects.all().first()
     return render(request, 'mainapp/contacts.html', {
         'title': title,
+        'contacts': contacts,
     })

@@ -1,5 +1,6 @@
 from django.conf import settings
 from django.db import models
+from django.contrib.auth.models import User
 # from ckeditor.fields import RichTextField
 from ckeditor_uploader.fields import RichTextUploadingField
 # from ckeditor.widgets import CKEditorWidget
@@ -69,3 +70,45 @@ class Portfolio(models.Model):
 
     def __str__(self):
         return self.title
+    
+class Contacts(models.Model):
+    addr = models.TextField("Адрес",)
+    addr_url = models.TextField("Ссылка на карту", null=True, blank=True,)
+    phone = models.CharField("Телефон", max_length=100)
+    email = models.EmailField("E-mail", max_length=254)
+    driving_directions = models.TextField("Схема проезда", blank=True, null=True)
+    created_date = models.DateTimeField("Дата создания", default=timezone.now)
+
+    class Meta:
+        verbose_name = "Контакт"
+        verbose_name_plural = "Контакты"
+
+    def __str__(self):
+        return self.addr
+
+
+class Feedback(models.Model):
+    service = models.ForeignKey(
+        Service,
+        verbose_name="Услуга",
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True
+    )
+    subject = models.CharField('Имя', max_length=255,  null=True, blank=True)
+    phone = models.CharField('Телефон', max_length=255, null=True, blank=True)
+    email = models.EmailField('E-mail', max_length=255,)
+    content = models.TextField('Текст запроса')
+    created_date = models.DateTimeField('Дата отправки', auto_now_add=True,)
+    ip_address = models.GenericIPAddressField('IP отправителя', blank=True, null=True)
+    # user = models.ForeignKey(User, verbose_name='Пользователь',
+    #                          on_delete=models.CASCADE, null=True, blank=True)
+
+    class Meta:
+        verbose_name = 'Обратная связь'
+        verbose_name_plural = 'Обратная связь'
+        ordering = ['-created_date']
+        db_table = 'app_feedback'
+
+    def __str__(self):
+        return f'Вам письмо от {self.email}'

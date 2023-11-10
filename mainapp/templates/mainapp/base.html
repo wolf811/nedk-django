@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>НЭДК - Национальная экспертно-диагностическая компания</title>
-  
+
     {% block css %}
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
@@ -30,10 +30,8 @@
 <body>
     <div class="wrapper">
         <main class="bg-body-tertiary mb-5">
-            {% include "mainapp/includes/navbar.html" %}
-            {% include "mainapp/includes/header.html" %}
             {% block content %}
-            
+
             {% endblock %}
         </main>
 

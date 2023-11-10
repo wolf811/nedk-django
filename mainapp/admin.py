@@ -20,3 +20,8 @@ class ClientAdmin(admin.ModelAdmin):
 @admin.register(Portfolio)
 class PortfolioAdmin(admin.ModelAdmin):
     list_display = ['title', 'service', 'created_date', 'ordering']
+
+
+@admin.register(Contacts)
+class ContactsAdmin(admin.ModelAdmin):
+    list_display = ['addr', 'phone', 'email', 'created_date',]

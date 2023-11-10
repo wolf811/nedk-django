@@ -1,11 +1,24 @@
 {% extends 'mainapp/base.html' %}
 {% load static %}
 {% block content %}
+{% include "mainapp/includes/navbar.html" %}
+{% include "mainapp/includes/header.html" %}
 <div class="container">
     <h1 class="page-title fs-1">{{ title }}</h1>
     <hr>
     {% include "mainapp/includes/breadcrumb.html" %}
-    <div class="bg-light p-3 p-lg-5 mb-4 bg-body-tertiary rounded-4 shadow-sm">
+    {% for service in services %}
+        <div class="bg-light p-3 p-lg-5 mb-4 bg-body-tertiary rounded-4 shadow-sm">
+            <h2 class="page-title fs-2 mb-4">{{ service.title }}</h2>
+            <hr class="title-line mb-4 mb-lg-5">
+            <section class="fs-5 mb-4 mb-lg-5">
+                {{ service.text|safe }}
+            </section>
+            <button class="btn btn-primary btn-lg" type="button" data-bs-toggle="modal"
+                data-bs-target="#messageModal">Заказать услугу<i class="bi bi-arrow-right ms-1"></i></button>
+        </div>
+    {% endfor %}
+    {% comment %} <div class="bg-light p-3 p-lg-5 mb-4 bg-body-tertiary rounded-4 shadow-sm">
         <h2 class="page-title fs-2 mb-4">Разработка информационных систем</h2>
         <hr class="title-line mb-4 mb-lg-5">
         <section class="fs-5 mb-4 mb-lg-5">
@@ -191,10 +204,10 @@
                 продлить домен,
                 хостинг или SSL-сертификат на сайте.
             </p>
-        </section>
-        <button class="btn btn-primary btn-lg" type="button" data-bs-toggle="modal"
+            <button class="btn btn-primary btn-lg" type="button" data-bs-toggle="modal"
             data-bs-target="#messageModal">Заказать
             услугу<i class="bi bi-arrow-right ms-1"></i></button>
+        </div>
     </div>
-</div>
+</section> {% endcomment %}
 {% endblock %}
