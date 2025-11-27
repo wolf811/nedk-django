@@ -1,0 +1,39 @@
+{% load static %}
+<div class="modal fade" id="modalEdoSasv" tabindex="-1" aria-labelledby="modalEdoSasvLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="modalEdoSasvLabel">ЭДО САСв</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id="carouselEdoSasv" class="carousel slide">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="{% static 'img/edo_sasv1.png' %}" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static 'img/edo_sasv2.png' %}" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static 'img/edo_sasv3.png' %}" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselEdoSasv"
+                        data-bs-slide="prev">
+                        <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span> -->
+                        <span class="text-secondary" aria-hidden="true"><i
+                                class="bi bi-arrow-left-square-fill fs-1"></i></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselEdoSasv"
+                        data-bs-slide="next">
+                        <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span> -->
+                        <span class="text-secondary" aria-hidden="true"><i class="bi bi-arrow-right-square-fill fs-1"></i></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

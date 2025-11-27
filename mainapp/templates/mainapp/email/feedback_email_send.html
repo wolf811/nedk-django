@@ -1,0 +1,19 @@
+{% autoescape off %}
+
+Здравствуйте, Администратор,
+
+С контактной формы поступило новое сообщение со следующим содержимым:
+
+{{ content }}
+
+IP Адрес отправителя: {{ ip }}
+Тема: {{ subject }}
+Имя: {{ name }}
+Контактный телефон: {{ phone }}
+Email отправителя: {{ email }}
+Запрос услуги: {{ service }}
+{% comment %} {% if user %}Пользователь: {{ user.username }}{% endif %} {% endcomment %}
+
+Команда сайта Django Base Project
+
+{% endautoescape %}

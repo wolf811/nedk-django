@@ -1,0 +1,218 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+{% block content %}
+{% include "mainapp/includes/navbar.html" %}
+{% include "mainapp/includes/header.html" %}
+<div class="container">
+    <h1 class="page-title fs-1">{{ title }}</h1>
+    <hr>
+    {% include "mainapp/includes/breadcrumb.html" %}
+    {% comment %} {% for service in services %}
+        <div class="bg-light p-3 p-lg-5 mb-4 bg-body-tertiary rounded-4 shadow-sm">
+            <h2 class="page-title fs-2 mb-4">{{ service.title }}</h2>
+            <hr class="title-line mb-4 mb-lg-5">
+            <section class="fs-5 mb-4 mb-lg-5">
+                {{ service.text|safe }}
+            </section>
+            <button class="btn btn-primary btn-lg" type="button" data-bs-toggle="modal"
+                data-bs-target="#messageModal">Заказать услугу<i class="bi bi-arrow-right ms-1"></i></button>
+        </div>
+    {% endfor %} {% endcomment %}
+    <div class="bg-secondary bg-gradient bg-opacity-25 p-3 p-lg-5 mb-4 rounded-4 shadow-sm">
+          <section class="fs-5">
+            <p>
+              На странице представлены далеко не все проекты, которые были разработаны и поддерживаются нашей компанией.
+              Данные проекты являются примером того, как информационные технологии нами используются и играют важную
+              роль в сварочном производстве, оценке квалификаций и помогают в обеспечении промышленной безопасности.
+            </p>
+          </section>
+        </div>
+        <div class="bg-light p-3 p-lg-5 mb-4 bg-body-tertiary rounded-4 shadow-sm">
+          <h2 class="page-title fs-2 mb-4">Система ЭДО САСв - "Cистема электронного документооборота Системы аттестации
+            сварочного производсва"</h2>
+          <hr class="title-line mb-4 mb-lg-5">
+          <div class="row mb-4">
+            <div class="col-lg-4">
+              <div class="d-flex flex-column">
+                <a href="#" class="mb-3" data-bs-toggle="modal" data-bs-target="#modalEdoSasv"><img src="{% static 'img/edo_sasv1.png' %}" alt=""
+                    class="img-fluid border border-primary rounded-3"></a>
+                <a href="#" class="mb-3" data-bs-toggle="modal" data-bs-target="#modalEdoSasv"><img src="{% static 'img/edo_sasv2.png' %}" alt=""
+                    class="img-fluid border border-primary rounded-3"></a>
+                <a href="#" class="mb-3" data-bs-toggle="modal" data-bs-target="#modalEdoSasv"><img src="{% static 'img/edo_sasv3.png' %}" alt=""
+                    class="img-fluid border border-primary rounded-3"></a>
+              </div>
+            </div>
+            <div class="col-lg">
+              <section class="fs-5 mb-4 mb-lg-5">
+                <p>Глобальный проект как для Системы аттестации сварочного производства так и для сварочного
+                  производства в России в целом.</p>
+                <p>Система ЭДО САСв предназначена для автоматизации процессов аттестации персонала сварочного производства,
+                  сварочного
+                  оборудования, сварочных материалов и проверки готовности организаций к применению аттестованных
+                  технологий сварки, что
+                  в свою очередь включает управление документами, такими как заявки на аттестацию, протоколы испытаний,
+                  свидетельства об аттестации, удостоверения сварщиков и специалистов сварочного производства и т.д.
+                  Она позволяет сократить время на обработку документов, повысить эффективность работы сотрудников и
+                  улучшить качество
+                  предоставляемых услуг.</p>
+                <p>К функциям Системы ЭДО САСв можно отнести следующие:</p>
+                <ul class="fw-light">
+                  <li>Предоставление доступа пользователям;</li>
+                  <li>Регистрация и учет документов;</li>
+                  <li>Контроль сроков действия документов;</li>
+                  <li>Автоматическое формирование отчетов;</li>
+                  <li>Автоматическое формирование реестров аттестаций;</li>
+                  <li>Интеграция с другими системами;</li>
+                  <li>Безопасность и защита данных.</li>
+                </ul>
+                <p>Право использования Системы ЭДО САСв предоставляется в зависимости от того, в каком качестве будет выступать пользователь Системы:</p>
+                <ul class="fw-light">
+                  <li>пользователь, выступающий в качестве "Заявителя аттестации", начинает использовать сервис, подписывая Пользовательское соглашение при регистрации;</li>
+                  <li>с пользователями, выступающими в качестве "Аттестационных центров", подписывается индивидуальный договор на право доступа.</li>
+                </ul>
+              </section>
+              
+              <a href="https://edonaks.ru/" class="btn btn-primary" target="_blank">Перейти к проекту<i
+                  class="bi bi-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+          <em>* Система ЭДО САСв зарегистрирована в Реестре программ для ЭВМ (Правообладатель: Общество с ограниченной ответственностью "Национальная Экспертно-Диагностическая Компания", Свидетельство № 2025661978 от 15.05.2025 г.)</em>
+          <!-- <button class="btn btn-primary btn-lg" type="button" data-bs-toggle="modal"
+            data-bs-target="#messageModal">Заказать услугу<i class="bi bi-arrow-right ms-1"></i></button> -->
+        </div>
+        <div class="bg-light p-3 p-lg-5 mb-4 bg-body-tertiary rounded-4 shadow-sm">
+          <h2 class="page-title fs-2 mb-4">Система ЭДО СПКС - Автоматизированная информационная система электронного документооборота Совета по профессиональным квалификациям в области сварки</h2>
+          <hr class="title-line mb-4 mb-lg-5">
+          <div class="row mb-4">
+            <div class="col-lg-4">
+              <div class="d-flex flex-column">
+                <a href="#" class="mb-3" data-bs-toggle="modal" data-bs-target="#modalEdoSpks"><img src="{% static 'img/edo_spks1.png' %}" alt=""
+                    class="img-fluid border border-primary rounded-3"></a>
+                <a href="#" class="mb-3" data-bs-toggle="modal" data-bs-target="#modalEdoSpks"><img src="{% static 'img/edo_spks2.png' %}" alt=""
+                    class="img-fluid border border-primary rounded-3"></a>
+                <a href="#" class="mb-3" data-bs-toggle="modal" data-bs-target="#modalEdoSpks"><img src="{% static 'img/edo_spks3.png' %}" alt=""
+                    class="img-fluid border border-primary rounded-3"></a>
+                <a href="#" class="mb-3" data-bs-toggle="modal" data-bs-target="#modalEdoSpks"><img src="{% static 'img/edo_spks4.png' %}" alt="" class="img-fluid border border-primary rounded-3"></a>
+              </div>
+            </div>
+            <div class="col-lg">
+              <section class="fs-5 mb-4 mb-lg-5">
+                <p>Не менее значимый проект, используемый Советом по профессиональным квалификациям в области сварки
+                  (далее Совет) для процедур оценки квалификации персонала сварочного производства. Совет ведет свою
+                  деятельность в составе Национального совета при Президенте Российской Федерации по профессиональным
+                  квалификациям, при этом результаты деятельности Совета, с помощью ЭДО СПКС, передаются в общедоступный
+                  <a href="https://nok-nark.ru/" target="_blank">Реестр сведений о проведении независимой оценки
+                    квалификации</a>, размещенный на сайте Национального агентства развития квалификаций.</p>
+                <p>Система ЭДО СПКС предназначена для автоматизации процедур оценки квалификации персонала сварочного
+                  производства, проведения профессионального экзамена, наделения полномочиями экпертов и технических
+                  эксертов на право участия в работе квалификационной комиссии центров оценки квалификаций.</p>
+                <p>Основными функциями Системы ЭДО СПКС являются:</p>
+                <ul class="fw-light">
+                  <li>Предоставление доступа пользователям;</li>
+                  <li>Регистрация и учет документов;</li>
+                  <li>Контроль сроков действия документов;</li>
+                  <li>Автоматическое формирование отчетов;</li>
+                  <li>Автоматическое формирование реестра Свидетельств о квалфикации на сайте Совета;</li>
+                  <li>Интеграция с другими системами, в том числе передача данных в Реестр НОК НАРК;</li>
+                  <li>Безопасность и защита данных.</li>
+                </ul>
+                <p>Право использования Системы ЭДО СПКС предоставляется пользователям, выступающим в качестве "Центров оценки квалификаций", с которыми подписывается индивидуальный договор на право доступа.</p>
+              </section>
+              <a href="https://edonaks.ru/spks/" class="btn btn-primary" target="_blank">Перейти к проекту<i
+                  class="bi bi-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+          <em>* Система ЭДО СПКС зарегистрирована в Реестре программ для ЭВМ (Правообладатель: Общество с ограниченной ответственностью "Национальная Экспертно-Диагностическая Компания", Свидетельство № 2025661977 от 15.05.2025 г.)</em>
+        </div>
+        <div class="bg-light p-3 p-lg-5 mb-4 bg-body-tertiary rounded-4 shadow-sm">
+          <h2 class="page-title fs-2 mb-4">Сайт Саморегулируемой организации Ассоциация «Национальное Агентство Контроля
+            Сварки» (Сайт НАКС)</h2>
+          <hr class="title-line mb-4 mb-lg-5">
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="d-flex flex-column">
+                <a href="#" class="mb-3" data-bs-toggle="modal" data-bs-target="#modalSiteNaks"><img src="{% static 'img/site_naks.png' %}" alt="" class="img-fluid border border-primary rounded-3"></a>
+                <a href="#" class="mb-3" data-bs-toggle="modal" data-bs-target="#modalSiteNaks"><img src="{% static 'img/site_naks1.png' %}" alt=""
+                    class="img-fluid border border-primary rounded-3"></a>
+                <a href="#" class="mb-3" data-bs-toggle="modal" data-bs-target="#modalSiteNaks"><img src="{% static 'img/site_naks2.png' %}" alt=""
+                    class="img-fluid border border-primary rounded-3"></a>
+                <a href="#" class="mb-3" data-bs-toggle="modal" data-bs-target="#modalSiteNaks"><img src="{% static 'img/site_naks3.png' %}" alt=""
+                    class="img-fluid border border-primary rounded-3"></a>
+                
+              </div>
+            </div>
+            <div class="col-lg">
+              <section class="fs-5 mb-4 mb-lg-5">
+                <p>Сайт СРО Ассоциации НАКС (Национальное Агентство Контроля Сварки) является официальным веб-ресурсом
+                  этой
+                  организации. Здесь представлена информация о деятельности Ассоциации, ее членах, а также новости и
+                  события в области сварки, сварочного производства и смежных отраслях.</p>
+                <p class="fw-light">На сайте, помимо информации о проводимых Ассоциацией мероприятиях, можно найти сведения о документах
+                  и стандартах, регулирующих деятельльность в сварочном производстве.</p> 
+                  <p class="fw-light">Также, на сайте размещены реестры системы аттестации сварочного производства (реестры САСв), реестр свидетельств о квалификации Совета по профессиональным квалификациям в области сварки (реестр СПКС),
+                  реестры системы неразрушающего контроля на опасных производственных объектах (реестр СНК ОПО РОНКТД) и
+                  другие реестры. С помощью сведений, размещенных в этих реестрах, любое физическое или юридическое лицо
+                  может получить актуальную информацию в зависимости от цели обращения.</p>
+                <p>Перечисленная выше информация, формируется автоматически из баз данных, создаваемых с помощью
+                  информационных систем электронного документаоборота и представляет собой единый отлаженный механизм
+                  взаимодействия.</p>
+                <p>Дизайн сайта выполнен в современном стиле, а навигация интуитивно понятна и удобна для пользователей.
+                  На главной
+                  странице размещены актуальные новости и анонсы мероприятий, а также карта, показывающая масштаб
+                  деятельности СРО Ассоциация НАКС.</p>
+                <p>Сайт СРО Ассоциация НАКС является надежным источником информации для специалистов в области
+                  сварочного производства и
+                  смежных отраслей, а также для тех, кто только начинает свой путь в этой сфере.</p>
+
+              </section>
+              <a href="https://naks.ru/" class="btn btn-primary" target="_blank">Перейти к проекту<i
+                  class="bi bi-arrow-right ms-1"></i></a>
+            </div>
+          </div>
+          <!-- <button class="btn btn-primary btn-lg" type="button" data-bs-toggle="modal"
+                    data-bs-target="#messageModal">Заказать услугу<i class="bi bi-arrow-right ms-1"></i></button> -->
+        </div>
+        <div class="bg-light p-3 p-lg-5 mb-4 bg-body-tertiary rounded-4 shadow-sm">
+    <h2 class="page-title fs-2 mb-4">Сайт Российского сварочного профессионального сообщества (Сайт&nbsp;РСПС)</h2>
+    <hr class="title-line mb-4 mb-lg-5">
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="d-flex flex-column">
+                <a href="#" class="mb-3" data-bs-toggle="modal" data-bs-target="#modalSiteRsps"><img
+                        src="{% static 'img/site_rsps1.png' %}" alt="" class="img-fluid border border-primary rounded-3"></a>
+                <a href="#" class="mb-3" data-bs-toggle="modal" data-bs-target="#modalSiteRsps"><img
+                        src="{% static 'img/site_rsps2.png' %}" alt="" class="img-fluid border border-primary rounded-3"></a>
+                <a href="#" class="mb-3" data-bs-toggle="modal" data-bs-target="#modalSiteRsps"><img
+                        src="{% static 'img/site_rsps3.png' %}" alt="" class="img-fluid border border-primary rounded-3"></a>
+
+            </div>
+        </div>
+        <div class="col-lg">
+            <section class="fs-5 mb-4 mb-lg-5">
+                <p>Сайт Общероссийской общественной организации «Российское Сварочное Профессиональное Сообщество»
+                    (далее РСПС) является платформой для обмена опытом и знаниями между специалистами в области сварки,
+                    резки, неразрушающего контроля, разрушающих испытаний и других связанных отраслей промышленности и
+                    родственных процессов. На сайте представлены различные разделы, включая новости, документы, сведения
+                    о членах.</p>
+
+                <p>Для членов РСПС на сайте доступен личный кабинет, где можно получить информацию о своем региональном
+                    отделении, количестве членов и возможности регистрации на предстоящие мероприятия.</p>
+                <p>Административная часть сайта представлена обширным функционалом, где есть возможности по добавлению,
+                    редактированию и другим действиям направленным на управление всеми функциями сообщества:</p>
+                <ul class="fw-light">
+                    <li>создание новостей, конференций;</li>
+                    <li>управление региональными отделениями и членами сообщества;</li>
+                    <li>возможности регистрации на разные мероприятия;</li>
+                    <li>возможности оповещения членов сообщества;</li>
+                    <li>присвоение рейтинга и статусов.</li>
+                </ul>
+                <p>В данном проекте мы постарались создать информационный ресурс для людей, объединившихся на основе
+                    общности интересов для реализации общих целей.</p>
+            </section>
+            <a href="http://rusweldcom.ru/" class="btn btn-primary" target="_blank">Перейти к проекту<i
+                    class="bi bi-arrow-right ms-1"></i></a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

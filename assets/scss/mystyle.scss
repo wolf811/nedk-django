@@ -19,25 +19,25 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-// .fw-light {
-//     // font-family: 'OpenSans', sans-serif;
-//     font-weight: 300;
-// }
+.fw-light {
+    // font-family: 'OpenSans', sans-serif;
+    font-weight: 300;
+}
 
-// .fw-normal {
-//     // font-family: 'OpenSans', sans-serif;
-//     font-weight: 400;
-// }
+.fw-normal {
+    // font-family: 'OpenSans', sans-serif;
+    font-weight: 400;
+}
 
-// .fw-semibold {
-//     // font-family: 'OpenSans', sans-serif;
-//     font-weight: 600;
-// }
+.fw-semibold {
+    // font-family: 'OpenSans', sans-serif;
+    font-weight: 600;
+}
 
-// .fw-semibold {
-//     // font-family: 'OpenSans', sans-serif;
-//     font-weight: 700;
-// }
+.fw-semibold {
+    // font-family: 'OpenSans', sans-serif;
+    font-weight: 700;
+}
 
 .wrapper {
     display: flex !important;
@@ -200,6 +200,13 @@ a.btn-primary {
         height: 100%;
         object-fit: cover;
         padding: 0;
+    }
+
+    .card-img-top {
+        filter: none;
+        height: 120px !important;
+        object-fit: cover;
+        // max-height: 120px;
     }
 
     &:hover {

@@ -4,13 +4,13 @@
         {% if chunk.text %}
             {{ chunk.text|safe }}
         {% else %}
-        <p class="text-lg-justify">Компания предлагает широкий спектр IT-услуг. Мы
+        <p class="text-lg-justify">Компания предлагает широкий спектр ИТ-услуг. Мы
             специализируемся на проектировании,
             разработке и интеграции информационных систем в области промышленной безопасности, обеспечении технической
             поддержки и администрировании.</p>
         <p class="text-lg-justify">Наша команда профессионалов всегда готова помочь вам выбрать оптимальное решение для
             ваших задач и обеспечить
-            его успешную реализацию. Доверьте свою IT-инфраструктуру профессионалам, и мы поможем вам достичь новых
+            его успешную реализацию. Доверьте свою ИТ-инфраструктуру профессионалам, и мы поможем вам достичь новых
             высот в бизнесе!</p>
         {% endif %}
     </section>
@@ -24,6 +24,7 @@
 </div>
 
 <div class="text-center">
-    <button class="btn btn-primary btn-lg mt-4 mt-lg-5" type="button" data-bs-toggle="modal"
-        data-bs-target="#messageModal"><i class="bi bi-envelope me-2"></i>Написать нам</button>
+    {% comment %} <button class="btn btn-primary btn-lg mt-4 mt-lg-5" type="button" data-bs-toggle="modal"
+        data-bs-target="#messageModal"><i class="bi bi-envelope me-2"></i>Написать нам</button> {% endcomment %}
+        <a href="{% url 'feedback' %}" class="btn btn-primary btn-lg mt-4 mt-lg-5"><i class="bi bi-envelope me-2"></i>Написать нам</a>
 </div>

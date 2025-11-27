@@ -1,0 +1,27 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+{% block content %}
+{% include "mainapp/includes/navbar.html" %}
+{% include "mainapp/includes/header.html" %}
+<div class="container mb-3 bg-body-tertiary">
+    <h1 class="page-title fs-1">{{ title }}</h1>
+    <hr>
+    {% include "mainapp/includes/breadcrumb.html" %}
+    <div class="bg-light p-3 p-lg-5 mb-4 bg-body-tertiary rounded-4 shadow-sm">
+        {% comment %} <h2 class="page-title fs-2 mb-4">Ваш запрос</h2>
+        <hr class="title-line mb-4 mb-lg-5"> {% endcomment %}
+        <section class="fs-5">
+            <div class="row">
+                <div class="col-xl-4">
+                    <form method="post" action="{% url 'feedback' %}">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button type="submit" class="btn btn-primary">Отправить<i class="bi bi-arrow-right ms-1"></i></button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+{% endblock %}

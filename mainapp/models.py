@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 from ckeditor_uploader.fields import RichTextUploadingField
 # from ckeditor.widgets import CKEditorWidget
 from django.utils import timezone
-
+# from modules.services.utils import unique_slugify
 
 class Chunk(models.Model):
     """class for making html chunks on pages"""
@@ -95,11 +95,12 @@ class Feedback(models.Model):
         null=True,
         blank=True
     )
-    subject = models.CharField('Имя', max_length=255,  null=True, blank=True)
+    subject = models.CharField('Тема письма', max_length=255,  null=True, blank=True)
+    name = models.CharField('Имя', max_length=255,  null=True, blank=True)
     phone = models.CharField('Телефон', max_length=255, null=True, blank=True)
     email = models.EmailField('E-mail', max_length=255,)
     content = models.TextField('Текст запроса')
-    created_date = models.DateTimeField('Дата отправки', auto_now_add=True,)
+    created_date = models.DateTimeField('Дата отправки', default=timezone.now)
     ip_address = models.GenericIPAddressField('IP отправителя', blank=True, null=True)
     # user = models.ForeignKey(User, verbose_name='Пользователь',
     #                          on_delete=models.CASCADE, null=True, blank=True)

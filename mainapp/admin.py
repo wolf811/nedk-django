@@ -1,4 +1,6 @@
 from django.contrib import admin
+
+# from mptt.admin import DraggableMPTTAdmin
 from mainapp.models import *
 
 
@@ -25,3 +27,12 @@ class PortfolioAdmin(admin.ModelAdmin):
 @admin.register(Contacts)
 class ContactsAdmin(admin.ModelAdmin):
     list_display = ['addr', 'phone', 'email', 'created_date',]
+
+
+@admin.register(Feedback)
+class FeedbackAdmin(admin.ModelAdmin):
+    """
+    Админ-панель модели профиля
+    """
+    list_display = ('email', 'phone', 'service', 'ip_address',)
+    list_display_links = ('email', 'ip_address')

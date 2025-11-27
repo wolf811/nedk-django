@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     'ckeditor_uploader',
     'sass_processor',
     'mainapp',
+    # 'mptt',
+    'modules.services',
 ]
 
 MIDDLEWARE = [
@@ -167,6 +169,7 @@ CKEDITOR_CONFIGS = {
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.yandex.ru'
 EMAIL_PORT = 465
+EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True
 
 EMAIL_HOST_USER = 'nedk-it@yandex.ru'
@@ -176,7 +179,7 @@ DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 SERVER_EMAIL = EMAIL_HOST_USER
 EMAIL_ADMIN = EMAIL_HOST_USER
 
-# Обязательно должны быть SERVER_EMAIL и EMAIL_ADMIN, иначе письма не отправятся.
+# Обязательно должны быть EMAIL_SERVER и EMAIL_ADMIN, иначе письма не отправятся.
 
 # Yandex SMTP также работает со следующими настройками:
 
@@ -186,8 +189,8 @@ EMAIL_ADMIN = EMAIL_HOST_USER
 # EMAIL_PORT = 587
 # EMAIL_USE_TLS = True
 
-# EMAIL_HOST_USER = 'your_email@yandex.ru'
-# EMAIL_HOST_PASSWORD = 'your_yandex_smtp_password'
+# EMAIL_HOST_USER = 'nedk-it@yandex.ru'
+# EMAIL_HOST_PASSWORD = 'btrlkojayamonnix'
 
 # EMAIL_SERVER = EMAIL_HOST_USER
 # DEFAULT_FROM_EMAIL = EMAIL_HOST_USER

@@ -2,8 +2,8 @@
 <nav class="navbar navbar-main sticky-top navbar-expand-lg bg-body-tertiary mb-4">
     <div class="container shadow rounded-4 rounded-top-0">
         <a class="navbar-brand mr-0" href="{% url 'index' %}"><img src="{% static 'img/logo_nedk.png' %}" alt="Логотип" class="w-75"></a>
-        <div class="navbar-text fs-5 d-none d-md-block">
-            <a href="tel:+74997847289" class="me-3"><i class="bi bi-telephone me-1"></i>+7 499 784-72-89</a>
+        <div class="navbar-text d-none d-md-block">
+            <a href="tel:+74997847289" class="me-2"><i class="bi bi-telephone me-1"></i>+7 499 784-72-89</a>
             <a href="mailto:nedk-it@yandex.ru"><i class="bi bi-envelope me-1"></i>nedk-it@yandex.ru</a>
         </div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -17,6 +17,12 @@
                 </li>
                 <li class="nav-item fs-4">
                     <a class="nav-link {% if 'services' in request.path %}active{% endif %}" href="{% url 'services' %}">Услуги</a>
+                </li>
+                <li class="nav-item fs-4">
+                    <a class="nav-link {% if 'portfolio' in request.path %}active{% endif %}" href="{% url 'portfolio' %}">Портфолио</a>
+                </li>
+                <li class="nav-item fs-4">
+                    <a class="nav-link {% if 'accreditation' in request.path %}active{% endif %}" href="{% url 'accreditation' %}">Аккредитация ИТ</a>
                 </li>
                 <li class="nav-item fs-4">
                     <a class="nav-link {% if 'contacts' in request.path %}active{% endif %}" href="{% url 'contacts' %}">Контакты</a>
